@@ -17,7 +17,7 @@ TODO: Write usage instructions
 ## History
 1. #leetcode
 | No.  | 			Question		 	 |	 difficulty		|	  status |
-|:---  |			:---:				 |		:---:		|	  ---	:|
+| ---  |			:---:				 |		:---:		|	  ---	:|
 |153   |	findMinInRotatedSortedArr 	 |		Medium		|	accepted |
 |154   |	findMinInRotatedSortedArrII	 | 		Hard		|	accepted |
 2. #hackerrank
