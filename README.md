@@ -1,4 +1,4 @@
-# ${1:coding-practice}
+##1:coding-practice
 TODO: Write a project description
 
 ## Installation
@@ -16,8 +16,10 @@ TODO: Write usage instructions
 
 ## History
 1. leetcode
-	1. lcoj-153-findMinInRotatedSortedArr: accepted
-	2. lcoj-154-findMinInRotatedSortedArrII: accepted
+|: No. |: 			Question		 	:|	:difficulty:	|	  status:|
+|---   |			---					 |		---			|	  ---	 |
+|:153  |:	findMinInRotatedSortedArr 	:|		Medium		|	accepted:|
+|:154  |:	findMinInRotatedSortedArrII	:| 		Hard		|	accepted:|
 
 ## Credits
 imranariffin
