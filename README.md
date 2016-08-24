@@ -15,11 +15,12 @@ TODO: Write usage instructions
 5. Submit a pull request :D
 
 ## History
-1. leetcode
-|: No. |: 			Question		 	:|	:difficulty:	|	  status:|
-|---   |			---					 |		---			|	  ---	 |
-|:153  |:	findMinInRotatedSortedArr 	:|		Medium		|	accepted:|
-|:154  |:	findMinInRotatedSortedArrII	:| 		Hard		|	accepted:|
+1. #leetcode
+| No.  | 			Question		 	 |	 difficulty		|	  status |
+|:---  |			:---:				 |		:---:		|	  ---	:|
+|153   |	findMinInRotatedSortedArr 	 |		Medium		|	accepted |
+|154   |	findMinInRotatedSortedArrII	 | 		Hard		|	accepted |
+2. #hackerrank
 
 ## Credits
 imranariffin
