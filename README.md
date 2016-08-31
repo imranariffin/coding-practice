@@ -20,7 +20,13 @@ TODO: Write usage instructions
 | No.  | 			Question		 	 |	 difficulty		|	  status |
 | ---- |:-------------------------------:|:----------------:| ----------:|
 |153   |	findMinInRotatedSortedArr 	 |		Medium		|	accepted |
+|15    |	3sum						 | 		Meduium		|	accepted |
 |154   |	findMinInRotatedSortedArrII	 | 		Hard		|	accepted |
+|18    |	4sum						 | 		Medium		|	-------- |
+|263   |	ugly number					 | 		Easy		|	accepted |
+|289   |	game of life				 | 		Medium		|	accepted |
+|54    |	spiral matrix				 | 		Medium		|	accepted |
+|66    |	plus one					 | 		Easy		|	accepted |
 
 2. #hackerrank
 
