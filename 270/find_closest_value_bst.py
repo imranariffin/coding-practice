@@ -13,40 +13,11 @@ class Solution(object):
 		:type target: float
 		:rtype: int
 		"""
-		# traverse
 		if root == None:
 			return None
 
-		# print 	"null" if root.left == None else root.left.val, \
-		# 		root.val, \
-		# 		"null" if root.right == None else root.right.val
-
 		if root.left == None and root.right == None:
 			return root.val
-
-		# if root.left == None:
-		# 	# compare get_min(right) with root
-		# 	if self.get_least_diff(target, [root.val, self.get_min(root.right)]) == root.val:
-		# 		return root.val
-		# 	return self.closestValue(root.right, target)
-		# if root.right == None:
-		# 	# compare get_max(left) with root
-		# 	if self.get_least_diff(target, [root.val, self.get_max(root.left)]) == root.val:
-		# 		return root.val
-		# 	return self.closestValue(root.left, target)
-
-		# if target < root.val:
-		# 	# compare root.val and get_max(left)
-		# 	if self.get_least_diff(target, [root.val, self.get_max(root.left)]) == root.val:
-		# 		return root.val
-		# 	return self.closestValue(root.left, target)
-		# elif target > root.val:
-		# 	# compare root.val and get_min(right)
-		# 	if self.get_least_diff(target, [root.val, self.get_min(root.right)]) == root.val:
-		# 		return root.val
-		# 	return self.closestValue(root.right, target)
-		# else:
-		# 	return root.val
 
 		if target < root.val:
 			if root.left == None:
