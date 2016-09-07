@@ -54,19 +54,19 @@ class Solution(object):
 			
 			# print [n.__str__() for n in stack.ls]
 
-			while curr.left != None and curr not in visited:
+			if curr.left != None and curr not in visited:
 				curr = curr.left
 				stack.push(curr)
 			# print [n.__str__() for n in stack.ls]
+			else:
+				curr = stack.pop()
+				print curr
+				visited.add(curr)
+				ret.append(curr)
 
-			curr = stack.pop()
-			print curr
-			visited.add(curr)
-			ret.append(curr)
-
-			if curr.right != None:
-				curr = curr.right
-				stack.push(curr)
+				if curr.right != None:
+					curr = curr.right
+					stack.push(curr)
 
 			if stack.empty():
 				break
