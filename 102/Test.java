@@ -35,12 +35,17 @@ public class Test {
 
 		System.out.println("TEST 1");
 		System.out.println(btlt.level_order(t));
-		System.out.println("TEST 2");
+		System.out.println("TEST 2: solution 2");
+		System.out.println(btlt.traverse(t));
+		System.out.println("TEST 3");
 		t = new TreeNode(3, 
 				new TreeNode(9, null, null),
 				new TreeNode(20,
 					new TreeNode(15, null, null),
 					new TreeNode(7, null, null)));
 		System.out.println(btlt.level_order(t));
+
+		System.out.println("TEST 4: solution 2");
+		System.out.println(btlt.traverse(t));
 	}
 }

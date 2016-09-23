@@ -13,7 +13,9 @@ import java.util.List;
 public class Solution {
     public List<List<Integer>> levelOrder(TreeNode root) {
         List<List<Integer>> ret = new ArrayList<List<Integer>>();
-        return (new BinTreeLevelTraversal()).level_order(root);
+        // return (new BinTreeLevelTraversal()).level_order(root);
+        // Solution 2
+        return (new BinTreeLevelTraversal()).traverse(root);
     }
 
     public static void main(String[] args) {
@@ -52,7 +54,7 @@ public class Solution {
 			assert t != null;
 			assert ret != null;
 			assert ret.get(i) != null;
-			
+
 			if (i >= lvl-1) {
 				ret.get(i).add(t.val);
 				return;
@@ -78,6 +80,23 @@ public class Solution {
 			List<List<Integer>> ret = new ArrayList<List<Integer>>();
 			__level_order__(t, ret);
 			return ret;
+		}
+
+		// solution 2: add to ret as traversing inorder
+		List<List<Integer>>
+		traverse(TreeNode t) {
+			List<List<Integer>> ret = new ArrayList<List<Integer>>();
+			__traverse__(t, 0, ret);
+			return ret;
+		}
+		void __traverse__(TreeNode t, int lvl, List<List<Integer>> ret) {
+			if (t == null) return;
+			if (ret.size() <= lvl)
+				ret.add(new ArrayList<Integer>());
+
+			if (t.left != null) __traverse__(t.left, lvl+1, ret);
+			ret.get(lvl).add(t.val);
+			if (t.right != null) __traverse__(t.right, lvl+1, ret);
 		}
 	}
 }
