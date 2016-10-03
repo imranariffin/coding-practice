@@ -45,4 +45,5 @@ if __name__=="__main__":
 	s = Solution()
 	edges = [[0, 3], [1, 3], [2, 3], [4, 3], [5, 4], [6, 7], [6, 8], [9, 10]]
 	n = 11
+	print edges
 	print s.countComponents(n, edges)

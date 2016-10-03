@@ -25,7 +25,7 @@ class Solution(object):
 
 		m = len(grid)
 		n = len(grid[0])
-		ret = [i*n+j if grid[i][j] == 1 else None for i in range(m) for j in range(n)]
+		ret = [i*n+j if grid[i][j] == 1 else None for i in xrange(m) for j in xrange(n)]
 
 		return filter(lambda x: x != None, ret)
 
@@ -109,7 +109,7 @@ class Solution(object):
 			self.dfs(v, g, visited, remaining)
 
 	def clone_undigraph(self, n, edges):
-		g = {x: [] for x in range(0, n)}
+		g = {x: [] for x in xrange(0, n)}
 		for e in edges:
 			n1 = e[0]
 			n2 = e[1]
