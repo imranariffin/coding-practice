@@ -1,6 +1,7 @@
 import java.util.HashMap;
 
 class LongestPalindrome {
+	// 23 ms
 	HashMap<Character, Integer> counter;
 
 	public int longestPalindrome(String s) {
