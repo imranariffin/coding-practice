@@ -11,9 +11,9 @@ class Solution(object):
         r = 0
         k = 1
         f = True
-        R = [[] for i in range(numRows)]
+        R = ['' for i in range(numRows)]
         
-        R[r].append(s[0])
+        R[r] += s[0]
         
         for i in range(1, len(s)):
             if k == numRows:
@@ -25,12 +25,7 @@ class Solution(object):
             else:
                 r -= 1
                 
-            R[r].append(s[i])
+            R[r] += s[i]
             k += 1
             
-        res = ''
-        
-        for row in R:
-            res += ''.join(row)
-            
-        return res
+        return ''.join(R)
