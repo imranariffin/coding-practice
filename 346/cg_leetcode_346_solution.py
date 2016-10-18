@@ -7,6 +7,8 @@ class MovingAverage(object):
         """
         self.s = size
         self.q = []
+        self.sum = 0
+        self.c = 0
 
     def next(self, val):
         """
@@ -14,16 +16,15 @@ class MovingAverage(object):
         :rtype: float
         """
         self.q.append(float(val))
-        
+        self.sum += self.q[-1]
+        self.c += 1
+
         while len(self.q) > self.s:
+            self.sum -= q[0]
+            self.c -= 1
             self.q.pop(0)
             
-        sum = 0
-        
-        for x in self.q:
-            sum += x
-            
-        return sum / len(self.q)
+        return self.sum / self.c
 
 # Your MovingAverage object will be instantiated and called as such:
 # obj = MovingAverage(size)
