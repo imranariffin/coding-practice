@@ -11,11 +11,15 @@ public class Solution {
         
         for (int fast = 0; fast < nums.length; fast++) {
             if (nums[fast] != 0) {
-                int tmp = nums[slow];
-                
-                nums[slow++] = nums[fast];
-                nums[fast] = tmp;
+                swap(nums, slow++, fast);
             }
         }
+    }
+
+    private void swap(int[] arr, int p0, int p1) {
+        int tmp = arr[p0];
+
+        arr[p0] = arr[p1];
+        arr[p1] = tmp;
     }
 }
