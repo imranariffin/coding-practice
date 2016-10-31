@@ -1,25 +1,43 @@
 public class Solution {
     public boolean isHappy(int n) {
-        HashSet<Integer> S = new HashSet<Integer>();
+        int loop = 0;
         
-        while (n != 1) {
-            if (!S.contains(n)) {
-                S.add(n);
-            }
-            else {
-                return false;
-            }
+        while (loop < 1000) {
+            n = calculate(toIntList(n));
             
-            int add = 0;
-            
-            while (n != 0) {
-                add += (n % 10) * (n % 10);
-                n /= 10;
+            if (n == 1) {
+                return true;
             }
             
-            n = add;
+            loop += 1;
         }
         
-        return true;
+        return false;
+    }
+    
+    private ArrayList<Integer> toIntList(int x) {
+        ArrayList<Integer> res = new ArrayList<Integer>();
+        
+        String s = Integer.toString(x);
+        
+        for (int i = 0; i < s.length(); i++) {
+            res.add(s.charAt(i) - '0');
+        }
+        
+        return res;
+    }
+    
+    private int calculate(ArrayList<Integer> arrList) {
+        int res = 0;
+        
+        Iterator<Integer> it = arrList.iterator();
+        
+        while (it.hasNext()) {
+            int x = it.next();
+            
+            res += x * x;
+        }
+        
+        return res;
     }
 }
