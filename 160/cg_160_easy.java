@@ -15,47 +15,47 @@ public class Solution {
             return null;
         }
         
-        int lenA = 0;
-        int lenB = 0;
-        ListNode nodeA = headA;
-        ListNode nodeB = headB;
-        
-        while (nodeA.next != null) {
-            nodeA = nodeA.next;
-            lenA++;
-        }
-        
-        while (nodeB.next != null) {
-            nodeB = nodeB.next;
-            lenB++;
-        }
-        
-        if (nodeA.val != nodeB.val) {
-            return null;
-        }
-        
+        int lenA = getLength(headA);
+        int lenB = getLength(headB);
         int lenDiff = Math.abs(lenA - lenB);
+        ListNode nodeA = lenA > lenB ? getNode(headA, lenDiff) : headA;
+        ListNode nodeB = lenB > lenA ? getNode(headB, lenDiff) : headB;
         
-        nodeA = headA;
-        nodeB = headB;
-        
-        if (lenA > lenB) {
-            for (int i = 0; i < lenDiff; i++) {
-                nodeA = nodeA.next;
+        while (nodeA != null && nodeB != null) {
+            if (nodeA.val == nodeB.val) {
+                return nodeA;
             }
-        }
-        
-        if (lenB > lenA) {
-            for (int i = 0; i < lenDiff; i++) {
-                nodeB = nodeB.next;
-            }
-        }
-        
-        while (nodeA.val != nodeB.val) {
+            
             nodeA = nodeA.next;
             nodeB = nodeB.next;
         }
         
-        return nodeA;
+        return null;
+    }
+    
+    private int getLength(ListNode node) {
+        if (node == null) {
+            return 0;
+        }
+        
+        int len = 0;
+        ListNode tmp = node;
+        
+        while (tmp != null) {
+            len++;
+            tmp = tmp.next;
+        }
+        
+        return len;
+    }
+    
+    private ListNode getNode(ListNode node, int d) {
+        ListNode tmp = node;
+        
+        for (int i = 0; i < d; i++) {
+            tmp = tmp.next;
+        }
+        
+        return tmp;
     }
 }
