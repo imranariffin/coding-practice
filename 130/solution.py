@@ -1,3 +1,7 @@
+"""
+exceeded recursion depth
+"""
+
 class Solution(object):
 	def solve(self, board):
 		"""
@@ -37,10 +41,6 @@ class Solution(object):
 			self.is_surrounded(visited, board, i+1, j) and
 			self.is_surrounded(visited, board, i, j-1) and
 			self.is_surrounded(visited, board, i, j+1)
-			# self.is_surrounded(visited, board, i-1, j-1) and
-			# self.is_surrounded(visited, board, i-1, j+1) and
-			# self.is_surrounded(visited, board, i+1, j-1) and
-			# self.is_surrounded(visited, board, i+1, j+1)
 		)
 
 	def clear_maru(self, visited, board):
