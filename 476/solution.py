@@ -14,5 +14,5 @@ class Solution(object):
 if __name__ == '__main__':
 	s = Solution()
 
-	for i in range(1, 17):
-		s.findComplement(i)
+	for n in range(1, 17):
+		s.findComplement(n)
