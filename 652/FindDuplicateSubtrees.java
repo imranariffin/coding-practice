@@ -19,8 +19,6 @@ public class FindDuplicateSubtrees {
         
         Map<TreeNode,String> ids = new HashMap<>();
         for (int i = 0; i < iterList.size(); i++) {
-            // String id = iterList.subList(i, iterList.size())
-            //     .stream().map(t -> toString(t)).collect(Collectors.joining(","));
             String id = getTraversal(iterList.get(i))
                 .stream().map(t -> toString(t)).collect(Collectors.joining(","));
             TreeNode node = iterList.get(i);
@@ -31,7 +29,6 @@ public class FindDuplicateSubtrees {
         for (TreeNode t: iterList) {
             if (t != null) {
                 String id = ids.get(t);
-                // System.out.println(String.valueOf(t) + ": " + id);
                 if (invIndex.containsKey(id)) {
                     invIndex.get(id).add(t);
                 } else {
@@ -44,7 +41,6 @@ public class FindDuplicateSubtrees {
         
         List<TreeNode> ret = new ArrayList<>();
         for (String key: invIndex.keySet()) {
-            // System.out.println(key + ": " + invIndex.get(key));
             if (invIndex.get(key).size() > 1) {
                 ret.add(invIndex.get(key).get(0));
             }
