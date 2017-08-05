@@ -8,27 +8,25 @@
  */
 public class Solution {
     public ListNode oddEvenList(ListNode head) {
-        if (head == null) return head;
-
-        ListNode even_tail = new ListNode(-1);
-        ListNode even_head = even_tail;
-
-        ListNode node = head;
-        while (node.next != null && node.next.next != null) {
-            even_tail.next = node.next;
-            even_tail = even_tail.next;
-            node.next = node.next.next;
-            even_tail.next = null;
-            node = node.next;
+        if (head == null) {
+            return head;
         }
 
-        if (node.next != null) {
-            even_tail.next = node.next;
+        ListNode odd_head = head;
+        ListNode odd_tail = odd_head;
+
+        ListNode even_head = head.next;
+        ListNode even_tail = even_head;
+
+        while (even_tail != null && even_tail.next != null) {
+            odd_tail.next = even_tail.next;
+            odd_tail = odd_tail.next;
+
+            even_tail.next = even_tail.next.next;
             even_tail = even_tail.next;
-            even_tail.next = null;
         }
 
-        node.next = even_head.next;
+        odd_tail.next = even_head;
 
         return head;
     }
