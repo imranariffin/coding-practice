@@ -12,3 +12,8 @@ def heapify(ls, i):
     if i_largest != i:
         ls[i], ls[i_largest] = ls[i_largest], ls[i]
         heapify(ls, i_largest)
+
+
+def build_heap(ls):
+    for i in range(int(len(ls) / 2), -1, -1):
+        heapify(ls, i)
