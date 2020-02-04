@@ -52,13 +52,15 @@ class TestBinaryTreeIteratorPreorder(unittest.TestCase):
             (
                 TreeNode(
                     1,
+                    None,
                     TreeNode(
                         2,
+                        None,
                         TreeNode(
                             3,
+                            None,
                             TreeNode(
                                 4,
-                                None,
                                 TreeNode(5)
                             ),
                         ),
