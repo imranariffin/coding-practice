@@ -11,19 +11,19 @@ from .utils import (
 )
 
 
-def make_n_heaps(
+def make_n_chunks(
     num_of_heaps: int,
     ifile_name: str,
     sort_columns: t.Tuple[ColumnNames, ...],
 ) -> None:
     with Pool(processes=num_of_heaps) as pool:
         for chunk_id in range(num_of_heaps):
-            pool.apply_async(make_heap, (chunk_id, num_of_heaps, ifile_name, sort_columns))
+            pool.apply_async(make_chunks, (chunk_id, num_of_heaps, ifile_name, sort_columns))
         pool.close()
         pool.join()
 
 
-def make_heap(
+def make_chunks(
     chunk_id: int,
     num_of_chunks: int,
     ifile_name: str,
@@ -75,7 +75,7 @@ def make_heap(
 
 def _test():
     num_of_chunks = 20
-    make_n_heaps(
+    make_n_chunks(
         num_of_heaps=num_of_chunks,
         ifile_name="./random_data.csv",
         # ifile_name="./large_data.csv",

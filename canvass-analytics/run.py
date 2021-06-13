@@ -16,9 +16,9 @@ if __name__ == "__main__":
         problem_1.all_even_digits()
     elif challenge == 2:
         problem_2.main()
-    elif test == "test_make_heap":
-        problem_2.test_make_heap()
-    elif test == "test_merge_heap":
-        problem_2.test_merge_heap()
+    elif test == "test_make_chunks":
+        problem_2.test_make_chunks()
+    elif test == "test_merge_chunks":
+        problem_2.test_merge_chunks()
     else:
         raise Exception(f"Non existing challenge {challenge}")

@@ -22,7 +22,7 @@ def get_min_row(heap_rows: t.List[t.Tuple[int, Row]], sort_columns: t.Tuple[Colu
     return heapq.heappop(heap)[1]
 
 
-def merge_heap(
+def merge_chunks(
     base_ifile_name: str,
     chunk_ids: t.List[int],
     ofile_name: str,
@@ -75,7 +75,7 @@ def merge_heap(
     
 
 def _test():
-    merge_heap(
+    merge_chunks(
         base_ifile_name="./random_data.csv",
         # base_ifile_name="./large_data.csv",
         chunk_ids=[chunk_id for chunk_id in range(20)],
