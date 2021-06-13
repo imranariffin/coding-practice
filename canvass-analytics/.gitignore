@@ -1,0 +1,8 @@
+venv/
+.vscode/
+
+# Temporary files
+*csv.chunk.*
+
+# Output files
+output.csv
